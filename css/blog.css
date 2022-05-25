@@ -3,9 +3,9 @@ body {
 }
 
 @font-face {
-	font-family: MyriadPro;
-	src: url(../fonts/OpenSans-Regular.woff2) format(woff2),
-		 url(../fonts/OpenSans-Bold.woff2) format(woff2);
+	font-family: "OpenSans", Arial, sans-serif;
+	src: url(../fonts/OpenSans-Regular.woff2) format("woff2"),
+		 url(../fonts/OpenSans-Bold.woff2) format("woff2");
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
@@ -34,11 +34,6 @@ body {
 		max-width: 230px;
 	}
 	
-	h1 {
-		font-size: 30px;
-		line-height: 55px;
-	}
-	
 	.post__image {
 		margin-bottom: 16px;
 	}
@@ -55,12 +50,9 @@ body {
 
 	.shop__items:nth-child(n+1) {
 		margin-bottom: 28px;
-		margin-left: 22px;
+		margin-right: 22px;
 	}
 	
-	.shop__items:nth-child(n+2) {
-		margin-left: 22px;
-	}	
 	
 	.title__trend {
 		margin-top: 46px;
@@ -70,6 +62,7 @@ body {
 @media (max-width: 1199px) {
 	.logo {
 		top: 43px;
+		left: 33px;
 	}
 
 	.menu-list {
@@ -87,6 +80,7 @@ body {
 
 	.tag__category {
 		margin-top: 16px;
+		margin-right: 16px;
 		font-size: 14px;
 	}
 
@@ -113,7 +107,7 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: 41px;
-		font-family: "Open Sans";
+		font-family: "OpenSans", Arial, sans-serif;
 	}
 	
 	.popup__close {
@@ -123,11 +117,25 @@ body {
 		right: -3px;
 		top: -36px;
 	}
+	
+	.shop__price {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 47px;
+		justify-content: flex-start;
+		max-width: 738px;
+	}
+	
+	.shop-block {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .shop__items {
 	position: relative;
 	max-width: 347px;
+	min-width: 347px;
 	height: 432px;
 }
 	
@@ -140,6 +148,12 @@ body {
 .side__bar {
 	margin-left: 35px;
 	margin-right: 35px;
+}
+
+@media (max-width: 831px) {
+	.shop__price {
+		justify-content: center;
+	}	
 }
 
 @media (max-width: 1199px) and (orientation: landscape) {	
@@ -171,13 +185,16 @@ body {
 		margin-left: 35px;
 	}
 
-	.shop__items:nth-child(n+1) {
+	.shop__items:nth-child(1) {
 		margin-bottom: 28px;
-		margin-left: 22px;
+		margin-right: 11px;
+		margin-left: 11px;
 	}
 	
 	.shop__items:nth-child(n+2) {
-		margin-left: 22px;
+		margin-bottom: 28px;
+		margin-left: 11px;
+		margin-right: 11px;
 	}	
 	
 	.title__trend {
@@ -185,9 +202,11 @@ body {
 	}
 }
 
-@media (min-width: 1200px) {	
+@media (min-width: 1200px) {
+	
 	.logo {
 		top: 25px;
+		left: 14.75%;
 	}
 
 	h1 {
@@ -209,14 +228,15 @@ body {
 		height: 45px;
 		justify-content: flex-end;
 		text-transform: uppercase;
+		list-style: none;
 		font-size: 13px;
 		align-items: flex-end;
-		font-family: "Open Sans";
+		font-family: "OpenSans", Arial, sans-serif;
 		top: 0;
 		right: 14.75%;
 		z-index: 7;
 	}
-	
+
 	.post__image img {
 		width: 381px;
 		height: 294px;
@@ -226,8 +246,12 @@ body {
 		margin-top: 50px;
 	}
 
-	.shop__items:nth-child(n+2) {
-		margin-left: 65px;
+	.shop__items:nth-child(n+1) {
+		margin-right: 65px;
+	}
+	
+	.shop__items:last-child {
+		margin-right: 0;
 	}
 	
 	.trend {
@@ -240,6 +264,7 @@ body {
 	}
 	.tag__category {
 		font-size: 14px;
+		margin-right: 16px;
 	}
 
 	.tag__category:hover {
@@ -264,6 +289,13 @@ body {
 		top: -28px;
 		cursor: pointer;
 	}	
+	
+	.shop__price {
+		display: flex;
+		margin: 0 auto;
+		justify-content: center;
+	}
+	
 }
 
 .header__menu {
@@ -312,9 +344,8 @@ body {
 
 .href__feedback {
 	display: block;
-	padding-top: 10px;
 	text-transform: uppercase;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-size: 14px;
 	text-align: center;
 	color: #777;
@@ -323,7 +354,7 @@ body {
 
 .select-title {
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	margin-left: 30px;
 }
 
@@ -344,7 +375,7 @@ body {
 	background-position: right 15px center;
 	background-color: #f9f9f9;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	color: #7c7e7d;
 }
 
@@ -354,7 +385,7 @@ body {
 
 .input-group__text {
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 }
 
 .input-group__text::before {
@@ -401,7 +432,7 @@ body {
 	height: 130px;
 	background-color: #f3f7f6;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	color: #7c7e7d;
 }
 
@@ -443,7 +474,7 @@ body {
 
 .post__new {
 	display: flex;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 }
 
 .tag__category {
@@ -451,7 +482,7 @@ body {
 	text-decoration: none;
 	color: #b59f5b;
 	align-items: center;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 }
 
@@ -474,29 +505,25 @@ body {
 	align-items: center;
 }
 
-.menu-list-item:nth-child(1) {
+.menu-list-item {
 	z-index: 7;
-	text-decoration: none;
-	color: white;
-}
-
-.menu-list-item:nth-child(1n+2) {
 	margin-left: 34px;
 	text-decoration: none;
 	color: white;
-	z-index: 7;
 }
 
 .title__trend {
 	text-transform: uppercase;
 	font-size: 20px;
 	align-items: center;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	text-align: center;
 }
 
-.title__line {
+.title__trend::after {
+	content: "";
+	display: block;
 	text-align: center;
 	width: 67px;
 	left: auto;
@@ -546,15 +573,31 @@ body {
 }
 
 .tags {
-	margin: 32px 32px 0 32px;
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 32px 0 0 32px;
+}
+
+.post__tags {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
 }
 
 .category {
-	margin: 5px 32px 32px 32px;
+	display: flex;
+	margin: 10px 32px 32px 32px;
 	text-transform: uppercase;
+	text-decoration: none;
 	font-size: 20px;
 	color: #fff;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 }
 
@@ -565,11 +608,10 @@ body {
 }
 
 h1 {
-	width: 75%;
 	text-transform: uppercase;
 	color: white;
 	margin: 0;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	text-align: center;
 	z-index: 2;
@@ -577,8 +619,13 @@ h1 {
 
 .logo {
 	position: absolute;
+	width: 180px;
+	height: 40px;
+	background-image: url("../svg/noemi-logo.svg");
+	background-repeat: no-repeat;
+	background-position: center;
 	z-index: 3;
-	left: 14.75%;
+	cursor: pointer;
 }
 
 .post__news:nth-child(1n+2) {
@@ -597,13 +644,15 @@ h1 {
 	display: block;
 	margin: 15px 0 36px 0;
 	text-transform: uppercase;
+	text-decoration: none;
+	color: inherit;
 	font-size: 20px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 }
 
 .post__date {
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: normal;
 	text-transform: none;
 	font-size: 12px;
@@ -625,9 +674,19 @@ h1 {
 	text-transform: uppercase;
 	font-size: 14px;
 	align-items: center;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	text-align: center;
+}
+
+.new__post::after {
+	content: "";
+	display: block;
+	text-align: center;
+	width: 67px;
+	left: auto;
+	margin: 10px auto 0 auto;
+	border-bottom: solid 3px #e1d9bd;
 }
 
 .post__image__base img {
@@ -647,7 +706,7 @@ h1 {
 .post__title__base {
 	text-transform: uppercase;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	color: black;
 }
@@ -710,7 +769,7 @@ h1 {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	color: white;
 	text-align: center;
@@ -725,7 +784,7 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	padding: 0;
+	padding: 8px 0 0 0;
 }
 
 .tag__name {
@@ -735,7 +794,7 @@ h1 {
 	border: 3px solid #eee;
 	text-transform: uppercase;
 	font-size: 12px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	list-style-type: none;
 }
@@ -755,7 +814,7 @@ h1 {
 	list-style-type: none;
 	padding: 0 12px 13px 0;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 }
 
@@ -773,11 +832,8 @@ h1 {
 	padding: 19px 0 13px 0;
 }
 
-.shop__price {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	min-width: 85%;
+.categories__style:first-child {
+	padding-top: 11px;
 }
 
 .shop__image {
@@ -802,7 +858,7 @@ h1 {
 .border__price {
 	box-sizing: border-box;
 	position: relative;
-	max-width: 100%;
+	min-width: 301px;
 	height: 267px;
 	top: -38px;
 	border: 3px solid rgba(181, 159, 91, 0.6);
@@ -811,7 +867,7 @@ h1 {
 
 .title__text {
 	font-size: 20px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -853,7 +909,7 @@ h1 {
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-weight: bold;
 	color: white;
 	text-align: center;
@@ -866,21 +922,51 @@ h1 {
 
 .social__items {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	padding: inherit;
 	height: 83px;
+	list-style-type: none;
 	background-color: #eee;
 }
 
 .items {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	margin-left: 30px;
 }
+
+.twitter {
+	background-image: url("../svg/004-twitter.svg");
+	margin-left: 0;
+}
+
+.pinterest {
+	background-image: url("../svg/001-pinterest.svg");	
+}
+
+.facebook {
+	background-image: url("../svg/002-facebook-logo.svg");
+}
+
+.instagram {
+	background-image: url("../svg/005-instagram.svg");
+}
+
+.tumblr {
+	background-image: url("../svg/003-tumblr.svg");
+}
+
 
 .copyrights {
 	margin-top: 74px;
 	margin-bottom: 44px;
-	font-family: "Open Sans";
+	font-family: "OpenSans", arial, sanf-serif;
 	font-size: 14px;
 	font-weight: bold;
 	color: #999;
